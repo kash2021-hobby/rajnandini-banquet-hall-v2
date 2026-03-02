@@ -67,12 +67,12 @@ const Services = () => {
 
         {/* All Services Button */}
         <div className="text-center">
-          <a
-            href="#services"
-            className="inline-block font-body text-sm font-medium text-foreground border border-border rounded-full px-8 py-3 hover:bg-muted transition-colors">
+          
 
 
-          </a>
+
+
+
         </div>
       </div>
     </section>);
