@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo.webp";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -37,7 +38,7 @@ const Footer = () => {
       {/* Footer columns */}
       <div className="container py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="space-y-4">
-          <h4 className="font-heading text-xl font-semibold">Rajnandini</h4>
+          <img src={logo} alt="Rajnandini Banquet Hall" className="h-12 brightness-0 invert" />
           <p className="font-body text-sm text-background/60 leading-relaxed">
             Guwahati's premier banquet hall for weddings, corporate events, and celebrations.
           </p>

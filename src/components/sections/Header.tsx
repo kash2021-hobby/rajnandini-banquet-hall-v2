@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Phone, Mail, Menu, X } from "lucide-react";
+import logo from "@/assets/logo.webp";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,8 +31,8 @@ const Header = () => {
       {/* Nav */}
       <nav className="bg-background/95 backdrop-blur-md shadow-sm">
         <div className="container flex justify-between items-center py-4">
-          <a href="#" className="font-heading text-2xl font-bold text-foreground tracking-tight">
-            Rajnandini
+          <a href="#" className="flex items-center">
+            <img src={logo} alt="Rajnandini Banquet Hall" className="h-12" />
           </a>
 
           {/* Desktop nav */}
