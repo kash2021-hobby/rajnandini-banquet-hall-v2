@@ -1,72 +1,50 @@
+import { useNavigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import menuVeg from "@/assets/menu-veg.jpg";
-import menuNonveg from "@/assets/menu-nonveg.jpg";
-import menuJain from "@/assets/menu-jain.jpg";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import menuChinese from "@/assets/menu-chinese.jpg";
+import menuVeg from "@/assets/menu-veg-new.jpg";
+import menuNonveg from "@/assets/menu-nonveg-new.jpg";
+import menuBirthday from "@/assets/menu-birthday.jpg";
+import menuDrinks from "@/assets/menu-drinks.jpg";
 
 const menus = [
-  {
-    title: "Veg Food Menu",
-    image: menuVeg,
-    items: [
-      "Paneer Butter Masala",
-      "Dal Makhani",
-      "Mixed Veg Curry",
-      "Jeera Rice & Naan",
-      "Gulab Jamun & Rasgulla",
-      "Live Chaat Counter",
-    ],
-  },
-  {
-    title: "Non-Veg Food Menu",
-    image: menuNonveg,
-    items: [
-      "Butter Chicken",
-      "Mutton Rogan Josh",
-      "Fish Curry",
-      "Chicken Biryani",
-      "Tandoori Platter",
-      "Dessert Assortment",
-    ],
-  },
-  {
-    title: "Jain Food Box",
-    image: menuJain,
-    items: [
-      "No Onion No Garlic Sabzi",
-      "Jain Dal Tadka",
-      "Steamed Rice & Roti",
-      "Dry Fruit Ladoo",
-      "Fresh Fruit Platter",
-      "Jain Snacks Counter",
-    ],
-  },
+  { title: "Chinese Foods", image: menuChinese, slug: "chinese-foods" },
+  { title: "Veg Foods", image: menuVeg, slug: "veg-foods" },
+  { title: "Non-Veg Foods", image: menuNonveg, slug: "non-veg-foods" },
+  { title: "Birthday Foods", image: menuBirthday, slug: "birthday-foods" },
+  { title: "Drinks", image: menuDrinks, slug: "drinks" },
 ];
 
-const MenuCard = ({ menu }: { menu: (typeof menus)[0] }) => (
-  <div className="bg-card border border-border rounded-3xl overflow-hidden h-full flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300">
-    <div className="h-48 overflow-hidden">
-      <img
-        src={menu.image}
-        alt={menu.title}
-        className="w-full h-full object-cover"
-      />
+const MenuCard = ({ menu }: { menu: (typeof menus)[0] }) => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="bg-card border border-border rounded-3xl overflow-hidden h-full flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300 group">
+      <div className="overflow-hidden">
+        <AspectRatio ratio={4 / 5}>
+          <img
+            src={menu.image}
+            alt={menu.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+        </AspectRatio>
+      </div>
+      <div className="p-6 flex flex-col items-center text-center flex-1 justify-center">
+        <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-5">
+          {menu.title}
+        </h3>
+        <button
+          onClick={() => navigate(`/food-menu#${menu.slug}`)}
+          className="bg-primary text-primary-foreground px-8 py-2.5 rounded-full font-body text-sm font-medium hover:bg-primary/90 transition-colors"
+        >
+          View Details
+        </button>
+      </div>
     </div>
-    <div className="p-6 flex flex-col items-center text-center flex-1">
-      <h3 className="font-heading text-2xl font-semibold text-foreground mb-5">
-        {menu.title}
-      </h3>
-      <ul className="space-y-2.5 font-body text-muted-foreground w-full">
-        {menu.items.map((item, i) => (
-          <li key={i} className="flex items-center gap-2 justify-center">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
-);
+  );
+};
 
 const FoodMenu = () => {
   const isMobile = useIsMobile();
@@ -87,14 +65,14 @@ const FoodMenu = () => {
           <Carousel opts={{ align: "start", loop: true, dragFree: true }} className="w-full">
             <CarouselContent className="-ml-4">
               {menus.map((menu, i) => (
-                <CarouselItem key={i} className="pl-4 basis-[85%]">
+                <CarouselItem key={i} className="pl-4 basis-[75%]">
                   <MenuCard menu={menu} />
                 </CarouselItem>
               ))}
             </CarouselContent>
           </Carousel>
         ) : (
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
             {menus.map((menu, i) => (
               <MenuCard key={i} menu={menu} />
             ))}
