@@ -8,39 +8,32 @@ import servicePackages from "@/assets/service-packages.webp";
 
 const services = [
   {
-    icon: MapPin,
-    image: serviceLocation,
-    title: "Prime Location in Guwahati",
-    description: "Convenient and easy for your guests to reach.",
-    label: "Locations",
+    icon: CalendarCheck,
+    image: serviceEvents,
+    title: "Your Dream Wedding, Our Expert Planning",
+    description: "From venue decoration to guest management, we plan every detail of your perfect day.",
+    label: "Wedding Planning",
   },
   {
     icon: Users,
     image: serviceGatherings,
-    title: "Spacious Banquet Hall",
-    description: "Perfectly designed to host both intimate and large gatherings.",
-    label: "Large Gatherings",
-  },
-  {
-    icon: CalendarCheck,
-    image: serviceEvents,
-    title: "Complete Event Management",
-    description: "From decoration to catering, we handle everything for you.",
-    label: "Event Solutions",
+    title: "Grand Reception Parties",
+    description: "Celebrate your special moments with elegantly organized reception parties.",
+    label: "Reception Parties",
   },
   {
     icon: Sparkles,
     image: serviceLuxury,
-    title: "Elegant Atmosphere",
-    description: "Modern interiors blended with traditional elegance.",
-    label: "Luxury Ambience",
+    title: "Memorable Birthday Celebrations",
+    description: "Make every birthday unforgettable with our themed decorations and arrangements.",
+    label: "Birthday Celebration",
   },
   {
     icon: IndianRupee,
     image: servicePackages,
-    title: "Budget-Friendly Packages",
-    description: "The best value for weddings and events in Guwahati.",
-    label: "Affordable Packages",
+    title: "Exquisite Catering Services",
+    description: "Premium multi-cuisine catering crafted to delight every palate.",
+    label: "Premium Catering",
   },
 ];
 
