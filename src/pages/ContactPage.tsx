@@ -1,29 +1,45 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { format } from "date-fns";
+import { CalendarIcon, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import Footer from "@/components/sections/Footer";
 import contactImg from "@/assets/contact.jpg";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const ContactPage = () => {
   const [searchParams] = useSearchParams();
+  const serviceName = searchParams.get("service") || "";
   const packageName = searchParams.get("package") || "";
+
+  const prefill = serviceName
+    ? `I'm interested in your ${serviceName} service.`
+    : packageName
+      ? `I'm interested in the ${packageName}.`
+      : "";
+
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    message: packageName ? `I'm interested in the ${packageName}.` : "",
+    service: serviceName,
+    message: prefill,
   });
+  const [date, setDate] = useState<Date>();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `Hi, I'm ${form.name}.%0A%0AEmail: ${form.email}${form.phone ? `%0APhone: ${form.phone}` : ""}%0A%0A${form.message}`;
+    const dateStr = date ? format(date, "PPP") : "";
+    const text = `Hi, I'm ${form.name}.%0A%0AEmail: ${form.email}${form.phone ? `%0APhone: ${form.phone}` : ""}${form.service ? `%0AService: ${form.service}` : ""}${dateStr ? `%0AEvent Date: ${dateStr}` : ""}%0A%0A${form.message}`;
     window.open(`https://wa.me/917099042360?text=${text}`, "_blank");
-    setForm({ name: "", email: "", phone: "", message: "" });
+    setForm({ name: "", email: "", phone: "", service: "", message: "" });
+    setDate(undefined);
   };
 
   return (
     <div className="min-h-screen bg-background">
-      
       <div className="pt-32 pb-20 lg:pb-28">
         <div className="container">
           <div className="text-center mb-16">
@@ -36,7 +52,6 @@ const ContactPage = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-6">
               <input
                 type="text"
@@ -61,6 +76,38 @@ const ContactPage = () => {
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 className="w-full bg-transparent border-b-2 border-border focus:border-primary outline-none py-3 font-body text-foreground placeholder:text-muted-foreground transition-colors"
               />
+              <input
+                type="text"
+                placeholder="Service Name"
+                value={form.service}
+                onChange={(e) => setForm({ ...form, service: e.target.value })}
+                className="w-full bg-transparent border-b-2 border-border focus:border-primary outline-none py-3 font-body text-foreground placeholder:text-muted-foreground transition-colors"
+              />
+              {/* Date Picker */}
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className={cn(
+                      "w-full justify-start text-left font-normal border-0 border-b-2 border-border rounded-none bg-transparent px-0 py-3 h-auto hover:bg-transparent focus:border-primary font-body",
+                      !date && "text-muted-foreground"
+                    )}
+                  >
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {date ? format(date, "PPP") : "Select Event Date"}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    disabled={(d) => d < new Date(new Date().setHours(0, 0, 0, 0))}
+                    initialFocus
+                    className={cn("p-3 pointer-events-auto")}
+                  />
+                </PopoverContent>
+              </Popover>
               <textarea
                 placeholder="Your Message"
                 value={form.message}
@@ -77,7 +124,6 @@ const ContactPage = () => {
               </button>
             </form>
 
-            {/* Info + Map */}
             <div className="space-y-8">
               <img
                 src={contactImg}
@@ -114,7 +160,6 @@ const ContactPage = () => {
                   </div>
                 </div>
               </div>
-              {/* Google Maps Embed */}
               <div className="rounded-3xl overflow-hidden shadow-lg">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.5!2d91.73!3d26.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDEyJzAwLjAiTiA5McKwNDMnNDguMCJF!5e0!3m2!1sen!2sin!4v1700000000000"

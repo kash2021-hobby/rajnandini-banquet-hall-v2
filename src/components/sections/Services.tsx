@@ -1,32 +1,46 @@
-import service1 from "@/assets/service-1.jpg";
-import service2 from "@/assets/service-2.jpg";
-import service3 from "@/assets/service-3.jpg";
-import service4 from "@/assets/service-4.jpg";
+import { useNavigate } from "react-router-dom";
+import { MapPin, Users, CalendarCheck, Sparkles, IndianRupee } from "lucide-react";
 
 const services = [
-{
-  image: service1,
-  title: "Wedding Planning",
-  subtitle: "Your Dream Wedding, Perfectly Planned"
-},
-{
-  image: service2,
-  title: "Fine Dinning",
-  subtitle: "Your Dream Wedding, Perfectly Planned"
-},
-{
-  image: service3,
-  title: "Corporate Event Decor",
-  subtitle: "Your Dream Wedding, Perfectly Planned"
-},
-{
-  image: service4,
-  title: "Dinner Planning",
-  subtitle: "Your Dream Wedding, Perfectly Planned"
-}];
-
+  {
+    icon: MapPin,
+    title: "Prime Location in Guwahati",
+    description: "Convenient and easy for your guests to reach.",
+    label: "Locations",
+  },
+  {
+    icon: Users,
+    title: "Spacious Banquet Hall",
+    description: "Perfectly designed to host both intimate and large gatherings.",
+    label: "Large Gatherings",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Complete Event Management",
+    description: "From decoration to catering, we handle everything for you.",
+    label: "Event Solutions",
+  },
+  {
+    icon: Sparkles,
+    title: "Elegant Atmosphere",
+    description: "Modern interiors blended with traditional elegance.",
+    label: "Luxury Ambience",
+  },
+  {
+    icon: IndianRupee,
+    title: "Budget-Friendly Packages",
+    description: "The best value for weddings and events in Guwahati.",
+    label: "Affordable Packages",
+  },
+];
 
 const Services = () => {
+  const navigate = useNavigate();
+
+  const handleBookNow = (serviceName: string) => {
+    navigate(`/contact?service=${encodeURIComponent(serviceName)}`);
+  };
+
   return (
     <section id="services" className="py-20 lg:py-28 bg-background">
       <div className="container">
@@ -45,38 +59,39 @@ const Services = () => {
         </div>
 
         {/* Service Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {services.map((service) =>
-          <div key={service.title} className="group cursor-pointer">
-              <div className="overflow-hidden rounded-2xl mb-5">
-                <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-[340px] object-cover transition-transform duration-500 group-hover:scale-105" />
-
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={service.label}
+                className="group border border-border rounded-2xl p-8 text-center hover:border-primary/40 hover:shadow-lg transition-all duration-300 bg-card"
+              >
+                <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <Icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground mb-2">
+                  {service.label}
+                </h3>
+                <p className="font-body text-sm text-muted-foreground mb-1 font-medium">
+                  {service.title}
+                </p>
+                <p className="font-body text-sm text-muted-foreground mb-6">
+                  {service.description}
+                </p>
+                <button
+                  onClick={() => handleBookNow(service.label)}
+                  className="bg-primary text-primary-foreground px-8 py-2.5 rounded-full font-body text-sm font-medium hover:bg-primary/90 transition-colors"
+                >
+                  Book Now
+                </button>
               </div>
-              <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground text-center">
-                {service.title}
-              </h3>
-              <p className="font-body text-muted-foreground text-sm text-center mt-1">
-                {service.subtitle}
-              </p>
-            </div>
-          )}
-        </div>
-
-        {/* All Services Button */}
-        <div className="text-center">
-          
-
-
-
-
-
+            );
+          })}
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default Services;
