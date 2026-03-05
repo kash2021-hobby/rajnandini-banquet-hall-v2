@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Footer from "@/components/sections/Footer";
+import ImageLightbox from "@/components/ImageLightbox";
 
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -17,6 +19,8 @@ const images = [
 ];
 
 const GalleryPage = () => {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
   return (
     <div className="min-h-screen bg-background">
       
@@ -35,7 +39,8 @@ const GalleryPage = () => {
             {images.map((img, i) => (
               <div
                 key={i}
-                className="break-inside-avoid overflow-hidden rounded-3xl group"
+                className="break-inside-avoid overflow-hidden rounded-3xl group cursor-pointer"
+                onClick={() => setSelectedIndex(i)}
               >
                 <img
                   src={img.src}
@@ -49,6 +54,14 @@ const GalleryPage = () => {
               </div>
             ))}
           </div>
+
+          <ImageLightbox
+            images={images}
+            selectedIndex={selectedIndex}
+            onClose={() => setSelectedIndex(null)}
+            onNext={() => setSelectedIndex((prev) => (prev !== null ? (prev + 1) % images.length : null))}
+            onPrev={() => setSelectedIndex((prev) => (prev !== null ? (prev - 1 + images.length) % images.length : null))}
+          />
         </div>
       </section>
       <Footer />

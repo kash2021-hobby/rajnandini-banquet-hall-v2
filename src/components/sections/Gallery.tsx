@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ImageLightbox from "@/components/ImageLightbox";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -18,6 +20,8 @@ const images = [
 ];
 
 const Gallery = () => {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
   return (
     <section id="gallery" className="py-20 lg:py-28">
       <div className="container">
@@ -34,7 +38,8 @@ const Gallery = () => {
           {images.map((img, i) => (
             <div
               key={i}
-              className={`overflow-hidden rounded-3xl group ${img.className}`}
+              className={`overflow-hidden rounded-3xl group cursor-pointer ${img.className}`}
+              onClick={() => setSelectedIndex(i)}
             >
               <img
                 src={img.src}
@@ -44,6 +49,14 @@ const Gallery = () => {
             </div>
           ))}
         </div>
+
+        <ImageLightbox
+          images={images}
+          selectedIndex={selectedIndex}
+          onClose={() => setSelectedIndex(null)}
+          onNext={() => setSelectedIndex((prev) => (prev !== null ? (prev + 1) % images.length : null))}
+          onPrev={() => setSelectedIndex((prev) => (prev !== null ? (prev - 1 + images.length) % images.length : null))}
+        />
 
           <div className="text-center mt-12">
             <Link to="/gallery">
