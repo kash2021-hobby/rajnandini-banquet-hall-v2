@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FoodMenu from "@/components/sections/FoodMenu";
 import Gallery from "@/components/sections/Gallery";
 import Stats from "@/components/sections/Stats";
