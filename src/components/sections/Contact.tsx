@@ -15,7 +15,7 @@ const Contact = () => {
     e.preventDefault();
     const dateStr = date ? format(date, "PPP") : "";
     const text = `Hi, I'm ${form.name}.%0A%0AEmail: ${form.email}${dateStr ? `%0AEvent Date: ${dateStr}` : ""}%0A%0A${form.message}`;
-    window.location.href = `https://wa.me/916406096161?text=${text}`;
+    window.location.href = `https://wa.me/919164060961?text=${text}`;
     setForm({ name: "", email: "", message: "" });
     setDate(undefined);
   };
