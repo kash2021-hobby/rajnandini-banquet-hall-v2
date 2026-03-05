@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FoodMenu from "@/components/sections/FoodMenu";
 import Gallery from "@/components/sections/Gallery";
 import Stats from "@/components/sections/Stats";
@@ -34,6 +35,7 @@ const Index = () => {
       <div className="fade-up visible"><Hero /></div>
       <div className="fade-up"><About /></div>
       <div className="fade-up"><Services /></div>
+      <div className="fade-up"><WhyChooseUs /></div>
       <div className="fade-up"><FoodMenu /></div>
       <div className="fade-up"><Gallery /></div>
       <Stats />
