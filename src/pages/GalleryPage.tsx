@@ -19,6 +19,8 @@ const images = [
 ];
 
 const GalleryPage = () => {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
   return (
     <div className="min-h-screen bg-background">
       
