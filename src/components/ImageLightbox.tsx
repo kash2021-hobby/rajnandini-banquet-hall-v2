@@ -82,20 +82,20 @@ const ImageLightbox = ({ images, selectedIndex, onClose, onNext, onPrev }: Image
 
       {/* Perfectly Centered Image Container */}
       <div 
-        className="fixed inset-0 flex items-center justify-center p-4 md:p-8 lg:p-12"
+        className="fixed inset-0 flex items-center justify-center px-16 py-20 md:px-20 md:py-24"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative flex flex-col items-center justify-center max-w-full max-h-full">
+        <div className="relative flex flex-col items-center justify-center w-full h-full">
           {/* Main Image - Perfectly Centered */}
           <img
             src={image.src}
             alt={image.alt}
-            className="max-h-[80vh] md:max-h-[85vh] max-w-[calc(100vw-2rem)] md:max-w-[calc(100vw-4rem)] lg:max-w-[calc(100vw-6rem)] w-auto h-auto object-contain select-none rounded-lg shadow-2xl"
+            className="max-w-full max-h-full w-auto h-auto object-contain select-none rounded-lg shadow-2xl"
             draggable={false}
           />
           
           {/* Image Caption */}
-          <div className="mt-4 px-4 py-2 bg-black/60 rounded-lg backdrop-blur-sm">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 mb-4 px-4 py-2 bg-black/60 rounded-lg backdrop-blur-sm max-w-[90%]">
             <p className="text-white/90 text-xs md:text-sm text-center select-none">
               {image.alt}
             </p>
@@ -103,7 +103,7 @@ const ImageLightbox = ({ images, selectedIndex, onClose, onNext, onPrev }: Image
           
           {/* Image Counter */}
           {images.length > 1 && (
-            <div className="mt-2 px-3 py-1 bg-black/60 rounded-full backdrop-blur-sm">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-12 px-3 py-1 bg-black/60 rounded-full backdrop-blur-sm">
               <p className="text-white/80 text-xs font-medium">
                 {selectedIndex + 1} / {images.length}
               </p>
