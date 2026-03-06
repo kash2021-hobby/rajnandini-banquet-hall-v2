@@ -9,7 +9,7 @@ import Index from "./pages/Index";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import GalleryPage from "./pages/GalleryPage";
-import FoodMenuPage from "./pages/FoodMenuPage";
+import FoodCategoryPage from "./pages/FoodCategoryPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
