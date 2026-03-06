@@ -12,15 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
-
-const services = [
-  "Wedding Events",
-  "Corporate Events",
-  "Birthday Parties",
-  "Anniversary Celebrations",
-  "Engagement Ceremonies",
-  "Other Events",
-];
+import { services } from "@/data/services";
 
 export const SelectedMenuPanel = () => {
   const { selectedItems, removeItem, clearAll } = useFoodSelection();
@@ -230,8 +222,8 @@ Please contact me regarding this request.`;
                   </SelectTrigger>
                   <SelectContent>
                     {services.map((service) => (
-                      <SelectItem key={service} value={service}>
-                        {service}
+                      <SelectItem key={service.value} value={service.label}>
+                        {service.label}
                       </SelectItem>
                     ))}
                   </SelectContent>
