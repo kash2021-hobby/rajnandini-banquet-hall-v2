@@ -9,7 +9,7 @@ import Stats from "@/components/sections/Stats";
 import Pricing from "@/components/sections/Pricing";
 import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
-import Blog from "@/components/sections/Blog";
+
 import Footer from "@/components/sections/Footer";
 
 const Index = () => {
