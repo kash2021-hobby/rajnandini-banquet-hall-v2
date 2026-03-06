@@ -32,7 +32,7 @@ const MenuCard = ({ menu }: { menu: (typeof menus)[0] }) => {
           {menu.title}
         </h3>
         <button
-          onClick={() => navigate(`/food-menu#${menu.slug}`)}
+          onClick={() => navigate(`/food-menu/${menu.slug}`)}
           className="bg-primary text-primary-foreground px-8 py-2.5 rounded-full font-body text-sm font-medium hover:bg-primary/90 transition-colors w-full max-w-[200px]"
         >
           View Details
