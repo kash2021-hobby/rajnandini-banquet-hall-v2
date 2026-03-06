@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import heroImg1 from "@/assets/hero-1.jpg";
-import heroImg2 from "@/assets/hero-2.jpg";
-import heroImg3 from "@/assets/hero-3.jpg";
+import heroImg1 from "@/assets/hero-1.webp";
+import heroImg2 from "@/assets/hero-2.webp";
+import heroImg3 from "@/assets/hero-3.webp";
 
 const Hero = () => {
   return (
