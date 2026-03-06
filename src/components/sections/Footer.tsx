@@ -1,10 +1,7 @@
 import { MapPin, Phone, Mail } from "lucide-react";
-import { useState } from "react";
 import logo from "@/assets/logo.webp";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-
   return (
     <footer className="bg-foreground text-background">
       {/* Newsletter */}
