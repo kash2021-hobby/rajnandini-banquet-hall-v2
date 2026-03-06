@@ -45,46 +45,49 @@ const ImageLightbox = ({ images, selectedIndex, onClose, onNext, onPrev }: Image
         setSwiping(false);
       }}
     >
-      {/* Close */}
+      {/* Close Button - Always Visible */}
       <button
         onClick={(e) => { e.stopPropagation(); onClose(); }}
-        className="absolute top-4 right-4 z-50 text-white/80 hover:text-white transition-colors"
+        className="absolute top-6 right-6 z-50 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-200 backdrop-blur-sm"
         aria-label="Close"
       >
-        <X className="h-7 w-7" />
+        <X className="h-6 w-6" />
       </button>
 
-      {/* Prev */}
+      {/* Navigation Buttons */}
       {images.length > 1 && (
-        <button
-          onClick={(e) => { e.stopPropagation(); onPrev(); }}
-          className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-50 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-2 md:p-3 transition-colors"
-          aria-label="Previous"
-        >
-          <ChevronLeft className="h-6 w-6 md:h-7 md:w-7" />
-        </button>
+        <>
+          {/* Previous Button */}
+          <button
+            onClick={(e) => { e.stopPropagation(); onPrev(); }}
+            className="absolute left-6 top-1/2 -translate-y-1/2 z-50 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-200 backdrop-blur-sm"
+            aria-label="Previous"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={(e) => { e.stopPropagation(); onNext(); }}
+            className="absolute right-6 top-1/2 -translate-y-1/2 z-50 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-200 backdrop-blur-sm"
+            aria-label="Next"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </>
       )}
 
-      {/* Next */}
-      {images.length > 1 && (
-        <button
-          onClick={(e) => { e.stopPropagation(); onNext(); }}
-          className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-50 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-2 md:p-3 transition-colors"
-          aria-label="Next"
-        >
-          <ChevronRight className="h-6 w-6 md:h-7 md:w-7" />
-        </button>
-      )}
-
-      {/* Image + caption */}
-      <div className="flex flex-col items-center justify-center w-full h-full px-12 md:px-20" onClick={(e) => e.stopPropagation()}>
+      {/* Centered Image */}
+      <div className="flex flex-col items-center justify-center w-full h-full px-4" onClick={(e) => e.stopPropagation()}>
         <img
           src={image.src}
           alt={image.alt}
-          className="max-h-[90vh] max-w-full w-auto h-auto object-contain select-none"
+          className="max-h-[85vh] max-w-[95vw] w-auto h-auto object-contain select-none"
           draggable={false}
         />
-        <p className="text-white/60 text-sm mt-3 text-center select-none">{image.alt}</p>
+        <p className="text-white/80 text-sm mt-4 text-center select-none max-w-[80vw] px-4">
+          {image.alt}
+        </p>
       </div>
     </div>
   );
