@@ -10,7 +10,10 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     hmr: {
       overlay: false,
+      clientPort: 443,
+      protocol: 'wss',
     },
+    allowedHosts: ['.sandbox.novita.ai', 'localhost'],
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
