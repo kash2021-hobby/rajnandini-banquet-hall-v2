@@ -42,7 +42,6 @@ const Index = () => {
       <div className="fade-up"><Pricing /></div>
       <div className="fade-up"><Testimonials /></div>
       <div className="fade-up"><Contact /></div>
-      <div className="fade-up"><Blog /></div>
       <Footer />
     </div>
   );
