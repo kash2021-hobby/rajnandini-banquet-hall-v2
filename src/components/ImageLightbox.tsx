@@ -39,7 +39,7 @@ const ImageLightbox = ({ images, selectedIndex, onClose, onNext, onPrev }: Image
 
   return (
     <div
-      className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm"
+      className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm"
       onClick={onClose}
       onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; setSwiping(true); }}
       onTouchEnd={(e) => {
@@ -91,13 +91,13 @@ const ImageLightbox = ({ images, selectedIndex, onClose, onNext, onPrev }: Image
         style={{ pointerEvents: 'none' }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative flex flex-col items-center justify-center w-full h-full" style={{ pointerEvents: 'auto' }}>
+        <div className="relative flex flex-col items-center justify-center max-w-[1100px] max-h-[80vh] w-full" style={{ pointerEvents: 'auto' }}>
           {/* Main Image - Perfectly Centered */}
           <img
             src={image.src}
             alt={image.alt}
-            style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto', objectFit: 'contain' }}
-            className="select-none rounded-lg shadow-2xl"
+            style={{ maxWidth: '100%', maxHeight: '80vh', objectFit: 'contain' }}
+            className="select-none rounded-2xl shadow-2xl"
             draggable={false}
           />
           
