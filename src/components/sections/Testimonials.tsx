@@ -110,28 +110,28 @@ const Testimonials = () => {
         </div>
 
         {/* Google Rating Summary */}
-        <div className="max-w-5xl mx-auto mb-12">
-          <div className="bg-background rounded-2xl p-8 shadow-md border border-border">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="max-w-5xl mx-auto mb-12 px-4 sm:px-6">
+          <div className="bg-background rounded-2xl p-4 sm:p-6 md:p-8 shadow-md border border-border">
+            <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 md:gap-6">
               {/* Left: Google Logo & Rating */}
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-3 sm:gap-4 md:gap-6 flex-1">
                 {/* Google Logo */}
-                <div className="flex items-center gap-3">
-                  <svg className="w-10 h-10" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <svg className="w-8 h-8 sm:w-10 sm:h-10 flex-shrink-0" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"/>
                     <path d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"/>
                     <path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"/>
                     <path d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
                   </svg>
-                  <div>
-                    <p className="text-sm text-muted-foreground font-medium">Google Reviews</p>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="text-3xl font-bold text-foreground">{averageRating}</span>
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground font-medium">Google Reviews</p>
+                    <div className="flex items-center gap-1.5 sm:gap-2 mt-1">
+                      <span className="text-2xl sm:text-3xl font-bold text-foreground">{averageRating}</span>
                       <div className="flex gap-0.5">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <Star
                             key={i}
-                            className={`w-5 h-5 ${
+                            className={`w-4 h-4 sm:w-5 sm:h-5 ${
                               i < Math.floor(averageRating)
                                 ? "fill-yellow-400 text-yellow-400"
                                 : "fill-gray-300 text-gray-300"
@@ -140,21 +140,24 @@ const Testimonials = () => {
                         ))}
                       </div>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">Based on {totalReviews} reviews</p>
+                    <p className="text-xs text-muted-foreground mt-0.5 sm:mt-1">Based on {totalReviews} reviews</p>
                   </div>
                 </div>
               </div>
 
               {/* Right: View All Reviews Button */}
-              <Button
-                onClick={handleViewAllReviews}
-                variant="outline"
-                size="lg"
-                className="font-medium gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                Read All Reviews on Google
-                <ExternalLink className="w-4 h-4" />
-              </Button>
+              <div className="flex justify-center md:justify-end mt-2 md:mt-0">
+                <Button
+                  onClick={handleViewAllReviews}
+                  variant="outline"
+                  size="lg"
+                  className="font-medium gap-2 hover:bg-primary hover:text-primary-foreground transition-colors w-full sm:w-auto whitespace-nowrap text-sm sm:text-base px-4 sm:px-6"
+                >
+                  <span className="hidden sm:inline">Read All Reviews on Google</span>
+                  <span className="sm:hidden">View on Google</span>
+                  <ExternalLink className="w-4 h-4 flex-shrink-0" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
