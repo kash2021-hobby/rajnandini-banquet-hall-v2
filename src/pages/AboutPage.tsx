@@ -1,4 +1,5 @@
 import Footer from "@/components/sections/Footer";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import aboutImg from "@/assets/about.webp";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -40,27 +41,14 @@ const AboutPage = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Why Choose Us */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground">Why Choose Us</h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { title: "Prime Location", desc: "Centrally located and easily accessible from all parts of Guwahati." },
-                { title: "Experienced Team", desc: "Our dedicated team brings years of event management expertise." },
-                { title: "Modern Amenities", desc: "State-of-the-art sound, lighting, and climate control systems." },
-                { title: "Customizable Packages", desc: "Flexible packages tailored to your budget and requirements." },
-              ].map((item, i) => (
-                <div key={i} className="text-center p-6 rounded-3xl bg-muted/50">
-                  <h3 className="font-heading text-lg font-semibold text-foreground mb-3">{item.title}</h3>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* Why Choose Us Section */}
+      <WhyChooseUs />
 
+      <section className="py-20 lg:py-28">
+        <div className="container">
           {/* Venue Highlights */}
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
             <div className="space-y-6 order-2 lg:order-1">
