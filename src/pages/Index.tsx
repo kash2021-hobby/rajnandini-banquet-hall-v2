@@ -4,7 +4,6 @@ import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FoodMenu from "@/components/sections/FoodMenu";
-import Gallery from "@/components/sections/Gallery";
 
 import Pricing from "@/components/sections/Pricing";
 import Testimonials from "@/components/sections/Testimonials";
@@ -37,7 +36,6 @@ const Index = () => {
       <div className="fade-up"><Services /></div>
       <div className="fade-up"><WhyChooseUs /></div>
       <div className="fade-up"><FoodMenu /></div>
-      <div className="fade-up"><Gallery /></div>
 
       <div className="fade-up"><Pricing /></div>
       <div className="fade-up"><Testimonials /></div>
