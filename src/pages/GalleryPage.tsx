@@ -70,18 +70,15 @@ const GalleryPage = () => {
             {images.map((img, i) => (
               <div
                 key={i}
-                className="break-inside-avoid overflow-hidden rounded-3xl group cursor-pointer"
+                className="break-inside-avoid overflow-hidden rounded-2xl group cursor-pointer"
                 onClick={() => setSelectedIndex(i)}
               >
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-                <div className="p-3 text-center">
-                  <p className="text-sm text-muted-foreground font-body">{img.alt}</p>
-                </div>
               </div>
             ))}
           </div>
