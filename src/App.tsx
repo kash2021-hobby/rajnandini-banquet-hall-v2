@@ -10,6 +10,7 @@ import Index from "./pages/Index";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import GalleryPage from "./pages/GalleryPage";
+import InstagramFeedPage from "./pages/InstagramFeedPage";
 import FoodCategoryPage from "./pages/FoodCategoryPage";
 import NotFound from "./pages/NotFound";
 
@@ -36,6 +37,7 @@ const App = () => (
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/instagram" element={<InstagramFeedPage />} />
               <Route path="/food-menu/:slug" element={<FoodCategoryPage />} />
             </Route>
             <Route path="*" element={<NotFound />} />

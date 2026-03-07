@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.webp";
 
 const Footer = () => {
@@ -29,13 +30,36 @@ const Footer = () => {
         <div className="space-y-4">
           <h4 className="font-heading text-lg font-semibold">Quick Links</h4>
           <ul className="space-y-2">
-            {["Home", "About Us", "Services", "Gallery", "Contact"].map((link) => (
-              <li key={link}>
-                <a href={`#${link.toLowerCase().replace(/\s/g, "-")}`} className="font-body text-sm text-background/60 hover:text-primary transition-colors">
-                  {link}
-                </a>
-              </li>
-            ))}
+            <li>
+              <Link to="/" className="font-body text-sm text-background/60 hover:text-primary transition-colors">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="font-body text-sm text-background/60 hover:text-primary transition-colors">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <a href="/#services" className="font-body text-sm text-background/60 hover:text-primary transition-colors">
+                Services
+              </a>
+            </li>
+            <li>
+              <Link to="/gallery" className="font-body text-sm text-background/60 hover:text-primary transition-colors">
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link to="/instagram" className="font-body text-sm text-background/60 hover:text-primary transition-colors">
+                Instagram Feed
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="font-body text-sm text-background/60 hover:text-primary transition-colors">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
