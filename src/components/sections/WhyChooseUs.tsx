@@ -4,7 +4,7 @@ import { MapPin, Users, CalendarCheck, Sparkles, IndianRupee, AirVent, Car, Shie
 import serviceAcComfort from "@/assets/service-ac-comfort.webp";
 import serviceParking from "@/assets/service-parking.webp";
 import serviceSecurity from "@/assets/service-security.webp";
-import serviceKitchen from "@/assets/service-kitchen.webp";
+import serviceKitchen from "@/assets/service-packages.webp";
 import serviceGuestRoom from "@/assets/service-guest-room.webp";
 
 const reasons = [

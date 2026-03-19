@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Users, CalendarCheck, Sparkles, IndianRupee } from "lucide-react";
 import serviceGatherings from "@/assets/service-gatherings.webp";
 import serviceEvents from "@/assets/service-events.webp";
-import serviceLuxury from "@/assets/service-luxury.webp";
+import serviceBirthday from "@/assets/service-birthday.webp";
 import servicePackages from "@/assets/service-packages.webp";
 
 const services = [
@@ -22,7 +22,7 @@ const services = [
   },
   {
     icon: Sparkles,
-    image: serviceLuxury,
+    image: serviceBirthday,
     title: "Memorable Birthday Celebrations",
     description: "Make every birthday unforgettable with our themed decorations and arrangements.",
     label: "Birthday Celebration",

@@ -4,52 +4,52 @@ import { Button } from "@/components/ui/button";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    role: "Bride",
-    avatar: "PS",
-    quote: "Rajnandini made our wedding day absolutely magical. The decoration was beyond our expectations, and the staff was incredibly attentive. Every guest complimented the venue and the food. Truly the best in Guwahati!",
-    rating: 5,
-    date: "2 weeks ago"
-  },
-  {
-    name: "Rahul Dutta",
-    role: "Corporate Client",
-    avatar: "RD",
-    quote: "We hosted our annual conference at Rajnandini and it was a seamless experience. The AV setup was top-notch, the catering was excellent, and the staff handled everything professionally. Highly recommended!",
-    rating: 5,
-    date: "1 month ago"
-  },
-  {
-    name: "Ananya Bose",
-    role: "Birthday Celebration",
-    avatar: "AB",
-    quote: "Amazing venue for celebrations! The team helped us plan everything perfectly for my daughter's birthday party. The food quality was outstanding and the ambiance was perfect. Will definitely book again!",
+    name: "Tritrisha Sarma",
+    role: "",
+    avatar: "TS",
+    quote: "The marriage hall was very clean and well-maintained. The decorations were beautifully done and created a wonderful atmosphere for the event. Most importantly, everything was arranged on the ground floor, which made it very convenient for elderly guests as they did not face any difficulties moving around. Overall, it was a great venue for the function.",
     rating: 5,
     date: "3 weeks ago"
   },
   {
-    name: "Vikram Singh",
-    role: "Reception Party",
-    avatar: "VS",
-    quote: "Excellent service and beautiful venue! Our reception party was a huge success thanks to the Rajnandini team. The air-conditioned halls are spacious and well-maintained. Parking was convenient too!",
+    name: "Ramen Baruah",
+    role: "",
+    avatar: "RB",
+    quote: "Recently I visited the Banquet hall.  Such a venues modern and appealing space, attentive and professional staff and excellent housekeeping . This vanue is praised for its neatness, clean rooms, well -maintained facilities ,convenient features like specious parking and spotless restroom. Pandel decoration and lighting were excellent.",
     rating: 5,
-    date: "1 month ago"
+    date: "3 months ago"
   },
   {
-    name: "Meera Patel",
-    role: "Wedding Planner",
-    avatar: "MP",
-    quote: "As a wedding planner, I've worked with many venues in Guwahati. Rajnandini stands out for their professionalism, beautiful setup, and attention to detail. My clients are always satisfied!",
+    name: "Jayant Roy",
+    role: "",
+    avatar: "JR",
+    quote: "Rajnandini Banquet Hall is a beautiful and well-managed venue in Guwahati. The hall is spacious, clean, and perfect for weddings or receptions. The staff is helpful, arrangements are smooth, and the décor gives a premium feel. Highly recommended for anyone looking for a reliable banquet hall.",
     rating: 5,
-    date: "2 months ago"
+    date: "3 months ago"
   },
   {
-    name: "Aditya Kumar",
-    role: "Groom",
-    avatar: "AK",
-    quote: "Perfect venue for our wedding! The banquet hall exceeded our expectations. Staff was courteous and managed everything smoothly. The food received rave reviews from all our guests. Highly recommend!",
+    name: "Hemanga Kalita",
+    role: "",
+    avatar: "HK",
+    quote: "I booked this venue for my son’s birthday celebration, and I am extremely happy with my decision. The location is very decent and easy for guests to reach. The decoration was beautifully done and added a special charm to the event. The entire venue was spotless and well-maintained, creating a very pleasant atmosphere.",
+    rating: 4,
+    date: "3 months ago"
+  },
+  {
+    name: "Ritu Parna Barmna",
+    role: "",
+    avatar: "RP",
+    quote: "Had a truly amazing experience. The venue is beautifully maintained with spacious area, elegant décor, and a warm atmosphere perfect for any grand celebration. The seating arrangements and lighting were done exactly as we wanted, which made the event look stunning in photos and videos.The management and staff were extremely professional, cooperative, and attentive to every small detail. Thank you for such wonderful service.",
     rating: 5,
-    date: "1 month ago"
+    date: "3 months ago"
+  },
+  {
+    name: "Harshita Khanna",
+    role: "",
+    avatar: "HK",
+    quote: "Rajnandini is a beautiful wedding venue. Made with love and so much attention given to details. It has a beautiful open area outside and a huge hall inside. With a beautiful 2 room suite for the family members. Super clean hygienic and attention to detail makes this place so stunning.",
+    rating: 5,
+    date: "1 year ago"
   },
 ];
 

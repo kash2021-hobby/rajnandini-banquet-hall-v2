@@ -23,6 +23,20 @@ import gallery18 from "@/assets/gallery-18.webp";
 import gallery19 from "@/assets/gallery-19.webp";
 import gallery20 from "@/assets/gallery-20.webp";
 import gallery21 from "@/assets/gallery-21.webp";
+import gallery22 from "@/assets/gallery-22.webp";
+import gallery23 from "@/assets/gallery-23.webp";
+import gallery24 from "@/assets/gallery-24.webp";
+import gallery26 from "@/assets/gallery-26.webp";
+import gallery27 from "@/assets/gallery-27.webp";
+import gallery28 from "@/assets/gallery-28.webp";
+import gallery29 from "@/assets/gallery-29.webp";
+import gallery30 from "@/assets/gallery-30.webp";
+import gallery31 from "@/assets/gallery-31.webp";
+import gallery32 from "@/assets/gallery-32.webp";
+import gallery33 from "@/assets/gallery-33.webp";
+import gallery34 from "@/assets/gallery-34.webp";
+import gallery35 from "@/assets/gallery-35.webp";
+import gallery36 from "@/assets/gallery-36.webp";
 
 const images = [
   { src: gallery1, alt: "Grand wedding reception" },
@@ -46,6 +60,22 @@ const images = [
   { src: gallery19, alt: "Event lighting" },
   { src: gallery20, alt: "Catering setup" },
   { src: gallery21, alt: "Venue exterior" },
+  { src: gallery22, alt: "Venue interior" },
+  { src: gallery23, alt: "Event decor" },
+  { src: gallery24, alt: "Special event" },
+  { src: gallery26, alt: "Charity gala" },
+  { src: gallery27, alt: "Award ceremony" },
+  { src: gallery28, alt: "Holiday party" },
+  { src: gallery29, alt: "Anniversary celebration" },
+  { src: gallery30, alt: "Community event" },
+  { src: gallery31, alt: "Fundraiser event" },
+  { src: gallery32, alt: "Product launch" },
+  { src: gallery33, alt: "Fashion show" },
+  { src: gallery34, alt: "Art exhibition" },
+  { src: gallery35, alt: "Cultural festival" },
+  { src: gallery36, alt: "Private party" },
+
+
 ];
 
 
