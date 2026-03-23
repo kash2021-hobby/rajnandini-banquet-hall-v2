@@ -10,7 +10,7 @@ import Index from "./pages/Index";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import GalleryPage from "./pages/GalleryPage";
-import InstagramFeedPage from "./pages/InstagramFeedPage";
+
 import FoodCategoryPage from "./pages/FoodCategoryPage";
 import NotFound from "./pages/NotFound";
 
