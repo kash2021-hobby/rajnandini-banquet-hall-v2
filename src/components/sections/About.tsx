@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import aboutImg from "@/assets/hero-1.webp";
+import aboutImg from "@/assets/about-venue.webp";
 
 const About = () => {
   return (
@@ -16,7 +16,7 @@ const About = () => {
               }}
             >
               <img
-                src="/assets/hero-1.webp"
+                src={aboutImg}
                 alt="Rajnandini Banquet Hall exterior"
                 className="w-full h-full object-cover"
               />
