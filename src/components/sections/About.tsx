@@ -46,7 +46,7 @@ const About = () => {
             unforgettable experiences.
           </p>
           <a
-            href="https://maps.app.goo.gl/dCbWAHKjBNUC2HRZ7"
+            href="https://maps.app.goo.gl/phuBkhKToKFfESMs6"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-full font-body text-sm font-medium hover:bg-primary/90 transition-colors mt-2"

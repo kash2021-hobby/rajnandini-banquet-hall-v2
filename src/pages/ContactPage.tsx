@@ -173,7 +173,7 @@ const ContactPage = () => {
               </div>
               <div className="rounded-3xl overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.5!2d91.73!3d26.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDEyJzAwLjAiTiA5McKwNDMnNDguMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.0!2d91.7445!3d26.182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5f1c3067c4b3%3A0x4ed26b0183665411!2sRAJNANDINI+Banquet+Hall!5e0!3m2!1sen!2sin!4v1700000000000"
                   width="100%"
                   height="200"
                   style={{ border: 0 }}

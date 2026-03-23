@@ -61,7 +61,7 @@ const Testimonials = () => {
 
   const handleViewAllReviews = () => {
     // Replace with actual Google Business profile URL
-    window.open("https://www.google.com/maps/search/rajnandini+banquet+hall+guwahati", "_blank", "noopener,noreferrer");
+    window.open("https://maps.app.goo.gl/phuBkhKToKFfESMs6", "_blank", "noopener,noreferrer");
   };
 
   // Duplicate testimonials for seamless loop
