@@ -1,17 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
-import menuChinese from "@/assets/menu-chinese.jpg";
-import menuVeg from "@/assets/menu-veg-new.jpg";
-import menuNonveg from "@/assets/menu-nonveg-new.jpg";
-import menuBirthday from "@/assets/menu-birthday.jpg";
-import menuDrinks from "@/assets/menu-drinks.jpg";
+import menuChinese from "@/assets/menu-chinese.webp";
+import menuVeg from "@/assets/menu-veg-new.webp";
+import menuNonveg from "@/assets/menu-nonveg-new.webp";
+import menuBirthday from "@/assets/menu-birthday.webp";
+import menuDrinks from "@/assets/menu-drinks.webp";
 
 const menus = [
-  { title: "Chinese Foods", image: menuChinese, slug: "chinese-foods" },
-  { title: "Veg Foods", image: menuVeg, slug: "veg-foods" },
-  { title: "Non-Veg Foods", image: menuNonveg, slug: "non-veg-foods" },
-  { title: "Birthday Foods", image: menuBirthday, slug: "birthday-foods" },
-  { title: "Drinks", image: menuDrinks, slug: "drinks" },
+  { title: "Live Counters", image: menuChinese, slug: "live-counters" },
+  { title: "Starters", image: menuNonveg, slug: "starters" },
+  { title: "Beverages & Soups", image: menuDrinks, slug: "beverages-soups" },
+  { title: "Main Course", image: menuVeg, slug: "main-course" },
+  { title: "Desserts", image: menuBirthday, slug: "desserts" },
 ];
 
 const MenuCard = ({ menu }: { menu: (typeof menus)[0] }) => {
