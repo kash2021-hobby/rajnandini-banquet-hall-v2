@@ -17,7 +17,7 @@ const Header = () => {
     Contact: "/contact",
     "About Us": "/about",
     Gallery: "/gallery",
-    "Instagram Feed": "/instagram",
+    
   };
 
   // Close dropdown on outside click
