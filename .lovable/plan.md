@@ -1,34 +1,42 @@
 
-Goal: Fix only the desktop header movement and keep the header/logo visually stable during page navigation (no footer changes).
 
-Plan
+# Use WebP Images Instead of JPG
 
-1) Keep Header mounted once across route changes
-- Update `src/App.tsx` to use a shared layout route with `<Header /> + <Outlet />`.
-- Remove `<Header />` usage/import from:
-  - `src/pages/Index.tsx`
-  - `src/pages/AboutPage.tsx`
-  - `src/pages/ContactPage.tsx`
-  - `src/pages/GalleryPage.tsx`
-- Footer stays exactly as-is in each page.
+## Current State
 
-2) Stabilize logo space inside header
-- In `src/components/sections/Header.tsx`, reserve fixed logo space so nav items don’t shift during image paint:
-  - Add explicit `width`/`height` attributes on the `<img>`
-  - Use fixed-width wrapper/class (desktop + mobile sizes) and `shrink-0`.
+The menu category images are all `.jpg`:
+- `menu-chinese.jpg`, `menu-veg-new.jpg`, `menu-nonveg-new.jpg`, `menu-birthday.jpg`, `menu-drinks.jpg`
 
-3) Make desktop width behavior fully stable
-- In `src/index.css`, strengthen scrollbar reservation for desktop by updating:
-  - `scrollbar-gutter: stable` → `scrollbar-gutter: stable both-edges`
-- Add fallback for browsers with weaker support (always reserve vertical scrollbar space via CSS fallback).
+**Problem**: There are no `.webp` versions of these menu images in `src/assets/`. WebP versions need to be uploaded first before the code can reference them.
 
-Technical details
-- Root cause is header remount + transient layout recalculation during route transitions.
-- Persisting Header at app-layout level prevents logo/menu reinitialization.
-- Explicit logo dimensions remove intrinsic-size reflow.
-- Stable scrollbar gutter prevents horizontal viewport-width changes that nudge centered nav content.
+Additionally, other JPG files exist:
+- `contact.jpg`, `gallery-1.jpg` through `gallery-6.jpg`, `service-1.jpg` through `service-4.jpg`
 
-Validation checklist
-- On desktop, click all header menu items repeatedly: header row should not move left/right.
-- Navigate `/`, `/about`, `/contact`, `/gallery`: logo should remain steady with no “refresh” flicker.
-- Confirm mobile menu behavior remains unchanged.
+Gallery images 7+ and service images like `service-ac-comfort.webp` already use WebP.
+
+## What's Needed
+
+### Step 1: You upload WebP versions of menu images
+Upload these files to `src/assets/`:
+- `menu-chinese.webp`
+- `menu-veg-new.webp`
+- `menu-nonveg-new.webp`
+- `menu-birthday.webp`
+- `menu-drinks.webp`
+
+Optionally also: `contact.webp`, `gallery-1.webp` through `gallery-6.webp`, `service-1.webp` through `service-4.webp`
+
+### Step 2: Update imports in code
+
+| File | Change |
+|------|--------|
+| `src/data/foodCategories.ts` | Change all `.jpg` imports to `.webp` |
+| `src/components/sections/FoodMenu.tsx` | Change all `.jpg` imports to `.webp` |
+| `src/components/sections/Gallery.tsx` | Change `gallery-1` through `gallery-6` from `.jpg` to `.webp` |
+| `src/pages/GalleryPage.tsx` | Same gallery jpg→webp changes |
+| Any other files importing jpg assets | Update accordingly |
+
+## Action Required
+
+**Please upload the WebP versions of the menu images first**, then I can update all the import references across the codebase. Would you like to upload them now?
+
