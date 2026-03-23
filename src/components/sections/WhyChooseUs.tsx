@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import { MapPin, Users, CalendarCheck, Sparkles, IndianRupee, AirVent, Car, Shield, ChefHat, Bed } from "lucide-react";
 
-import serviceAcComfort from "@/assets/service-ac-comfort.webp";
+import serviceAcComfort from "@/assets/gallery-23.webp";
 import serviceParking from "@/assets/service-parking.webp";
 import serviceSecurity from "@/assets/service-security.webp";
 import serviceKitchen from "@/assets/service-packages.webp";
