@@ -15,7 +15,7 @@ const About = () => {
                 border: "3px solid hsl(36, 32%, 58%)",
               }}
             >
-              <img src={aboutImg} alt="Rajnandini Banquet Hall exterior" className="w-full h-full object-cover" />
+              <img src="" alt="Rajnandini Banquet Hall exterior" className="w-full h-full object-cover" />
             </div>
             {/* Decorative dots */}
             <div className="absolute -bottom-6 -right-6 w-24 h-24 grid grid-cols-4 gap-1.5 opacity-30">
