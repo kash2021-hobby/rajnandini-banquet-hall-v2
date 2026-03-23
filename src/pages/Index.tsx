@@ -6,7 +6,7 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import FoodMenu from "@/components/sections/FoodMenu";
 import Gallery from "@/components/sections/Gallery";
 
-import Pricing from "@/components/sections/Pricing";
+
 import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 
