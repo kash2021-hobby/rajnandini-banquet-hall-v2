@@ -11,7 +11,7 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const dropdownRef = useRef<HTMLLIElement>(null);
-  const navLinks = ["Home", "About Us", "Services", "Food Menu", "Gallery", "Instagram Feed", "Contact"];
+  const navLinks = ["Home", "About Us", "Services", "Food Menu", "Gallery", "Contact"];
 
   const pageLinks: Record<string, string> = {
     Contact: "/contact",
