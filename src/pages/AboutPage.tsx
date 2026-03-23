@@ -1,10 +1,10 @@
 import Footer from "@/components/sections/Footer";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import aboutImg from "@/assets/about.webp";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import service1 from "@/assets/service-1.jpg";
-import service2 from "@/assets/service-2.jpg";
+import gallery1 from "@/assets/gallery-1.webp";
+import gallery2 from "@/assets/gallery-2.webp";
+import service1 from "@/assets/service-1.webp";
+import service2 from "@/assets/service-2.webp";
 import { Link } from "react-router-dom";
 
 const AboutPage = () => {
