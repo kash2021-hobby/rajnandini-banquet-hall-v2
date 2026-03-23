@@ -37,7 +37,7 @@ const App = () => (
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
-              <Route path="/instagram" element={<InstagramFeedPage />} />
+              
               <Route path="/food-menu/:slug" element={<FoodCategoryPage />} />
             </Route>
             <Route path="*" element={<NotFound />} />
