@@ -17,7 +17,7 @@ const About = () => {
               }}
             >
               <img
-                src="/assets/hero-1.webp"
+                src={hero1}
                 alt="Rajnandini Banquet Hall exterior"
                 className="w-full h-full object-cover"
               />
