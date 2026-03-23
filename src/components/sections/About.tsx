@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import aboutImg from "@/assets/about.webp";
+import hero1 from "@/assets/hero-1.webp";
 
 const About = () => {
   return (
