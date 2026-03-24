@@ -1,204 +1,12 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// Food category card images  (one per category)
-// ─────────────────────────────────────────────────────────────────────────────
-import menuChinese  from "@/assets/menu-chinese.webp";
-import menuVeg      from "@/assets/menu-veg-new.webp";
-import menuNonveg   from "@/assets/menu-nonveg-new.webp";
+import menuChinese from "@/assets/menu-chinese.webp";
+import foodPaniPuri from "@/assets/food/food-pani-puri.webp";
+import foodAlooTikki from "@/assets/food/food-aloo-tikki.webp";
+import foodJhalmuri from "@/assets/food/food-jhalmuri.webp";
+import menuVeg from "@/assets/menu-veg-new.webp";
+import menuNonveg from "@/assets/menu-nonveg-new.webp";
 import menuBirthday from "@/assets/menu-birthday.webp";
-import menuDrinks   from "@/assets/menu-drinks.webp";
+import menuDrinks from "@/assets/menu-drinks.webp";
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Per-item images — Live Counters
-// To swap an image just change the file name in src/assets/food/
-// ─────────────────────────────────────────────────────────────────────────────
-import imgPaniPuri                          from "@/assets/food/food-pani-puri.webp";
-import imgAlooTikki                         from "@/assets/food/food-aloo-tikki.webp";
-import imgJhalmuri                          from "@/assets/food/food-jhalmuri.webp";
-import imgDosaMasalaPlain                   from "@/assets/food/food-dosa-masala-plain.webp";
-import imgMiniDosa                          from "@/assets/food/food-mini-dosa.webp";
-import imgIdliSambar                        from "@/assets/food/food-idli-sambar.webp";
-import imgPastaWhiteOrRedSauce             from "@/assets/food/food-pasta-white-or-red-sauce.webp";
-import imgGrilledVegetables                from "@/assets/food/food-grilled-vegetables-with-herb-in-butter.webp";
-import imgStirFryVegNoodles                from "@/assets/food/food-stir-fry-veg-noodles.webp";
-import imgMomoVegOrChicken                 from "@/assets/food/food-momo-veg-or-chicken.webp";
-
-// Per-item images — Veg Starters
-import imgHaraBharaKabab   from "@/assets/food/food-hara-bhara-kabab.webp";
-import imgPaneerTikka      from "@/assets/food/food-paneer-tikka.webp";
-import imgCornKajuKabab    from "@/assets/food/food-corn-kaju-kabab.webp";
-import imgPalakPakora      from "@/assets/food/food-palak-pakora.webp";
-import imgPaneerPakora     from "@/assets/food/food-paneer-pakora.webp";
-import imgVegPakora        from "@/assets/food/food-veg-pakora.webp";
-import imgOnionPakora      from "@/assets/food/food-onion-pakora.webp";
-import imgFrenchFries      from "@/assets/food/food-french-fries.webp";
-import imgCrispyBabyCorn   from "@/assets/food/food-crispy-baby-corn.webp";
-import imgCheeseBall       from "@/assets/food/food-cheese-ball.webp";
-import imgChilliPaneerDry  from "@/assets/food/food-chilli-paneer-dry.webp";
-import imgHoneyChilliPotato from "@/assets/food/food-honey-chilli-potato.webp";
-import imgVegManchurianDry from "@/assets/food/food-veg-manchurian-dry.webp";
-import imgCheeseNuggets    from "@/assets/food/food-cheese-nuggets.webp";
-
-// Per-item images — Non-Veg Starters
-import imgChickenTikka         from "@/assets/food/food-chicken-tikka.webp";
-import imgChicken65            from "@/assets/food/food-chicken-65.webp";
-import imgChickenMajestic      from "@/assets/food/food-chicken-majestic.webp";
-import imgChickenSatay         from "@/assets/food/food-chicken-satay.webp";
-import imgChickenMalaiTikka    from "@/assets/food/food-chicken-malai-tikka.webp";
-import imgChickenHariyaliTikka from "@/assets/food/food-chicken-hariyali-tikka.webp";
-import imgChickenMalaiKabab    from "@/assets/food/food-chicken-malai-kabab.webp";
-import imgChickenPakora        from "@/assets/food/food-chicken-pakora.webp";
-import imgChickenCrisper       from "@/assets/food/food-chicken-crisper.webp";
-import imgChilliChickenDry     from "@/assets/food/food-chilli-chicken-dry.webp";
-import imgChickenDryFry        from "@/assets/food/food-chicken-dry-fry.webp";
-import imgChickenCutlet        from "@/assets/food/food-chicken-cutlet.webp";
-import imgFishFinger           from "@/assets/food/food-fish-finger.webp";
-import imgFishBall             from "@/assets/food/food-fish-ball.webp";
-import imgFishCutlet           from "@/assets/food/food-fish-cutlet.webp";
-import imgCrispyFishCigar      from "@/assets/food/food-crispy-fish-cigar.webp";
-
-// Per-item images — Beverages & Soups
-import imgVirginMojito     from "@/assets/food/food-virgin-mojito.webp";
-import imgMasalaSoda       from "@/assets/food/food-masala-soda.webp";
-import imgBlueLagoon       from "@/assets/food/food-blue-lagoon.webp";
-import imgWatermelonCooler from "@/assets/food/food-watermelon-cooler.webp";
-import imgAamPanna         from "@/assets/food/food-aam-panna.webp";
-import imgPeachMojito      from "@/assets/food/food-peach-mojito.webp";
-import imgMilkCoffee       from "@/assets/food/food-milk-coffee.webp";
-import imgBlackCoffee      from "@/assets/food/food-black-coffee.webp";
-import imgMilkTea          from "@/assets/food/food-milk-tea.webp";
-import imgBlackTea         from "@/assets/food/food-black-tea.webp";
-import imgGreenTea         from "@/assets/food/food-green-tea.webp";
-import imgMasalaTea        from "@/assets/food/food-masala-tea.webp";
-import imgLemonTea         from "@/assets/food/food-lemon-tea.webp";
-import imgSweetCornSoup    from "@/assets/food/food-sweet-corn-soup.webp";
-import imgClearSoup        from "@/assets/food/food-clear-soup.webp";
-import imgHotSourSoup      from "@/assets/food/food-hot-sour-soup.webp";
-import imgManchowSoup      from "@/assets/food/food-manchow-soup.webp";
-
-// Per-item images — Main Course: Salads
-import imgGreenSalad   from "@/assets/food/food-green-salad.webp";
-import imgSproutSalad  from "@/assets/food/food-sprout-salad.webp";
-import imgOnionSalad   from "@/assets/food/food-onion-salad.webp";
-import imgCornSalad    from "@/assets/food/food-corn-salad.webp";
-import imgPeanutSalad  from "@/assets/food/food-peanut-salad.webp";
-
-// Per-item images — Chutney
-import imgMintCorianderChutney from "@/assets/food/food-mintcoriander-chutney.webp";
-import imgChilliMustardChutney from "@/assets/food/food-chilli-mustard-chutney.webp";
-import imgGarlicChutney        from "@/assets/food/food-garlic-chutney.webp";
-import imgMintChutney          from "@/assets/food/food-mint-chutney.webp";
-import imgMasoorDalChutney     from "@/assets/food/food-masoor-dal-chutney.webp";
-import imgSesameChutney        from "@/assets/food/food-sesame-chutney.webp";
-
-// Per-item images — Add-ons
-import imgPickle      from "@/assets/food/food-pickle.webp";
-import imgSlicedLemon from "@/assets/food/food-sliced-lemon.webp";
-import imgSlicedOnion from "@/assets/food/food-sliced-onion.webp";
-import imgGreenChilli from "@/assets/food/food-green-chilli.webp";
-
-// Per-item images — Breads
-import imgRumaliRoti   from "@/assets/food/food-rumali-roti.webp";
-import imgTandooriRoti from "@/assets/food/food-tandoori-roti.webp";
-import imgPlainNaan    from "@/assets/food/food-plain-naan.webp";
-import imgButterNaan   from "@/assets/food/food-butter-naan.webp";
-import imgPlainPuri    from "@/assets/food/food-plain-puri.webp";
-import imgLachhaParatha from "@/assets/food/food-lachha-paratha.webp";
-
-// Per-item images — Rice
-import imgSteamRice      from "@/assets/food/food-steam-rice.webp";
-import imgJeeraRice      from "@/assets/food/food-jeera-rice.webp";
-import imgVegBiryani     from "@/assets/food/food-veg-biryani.webp";
-import imgVegFriedRice   from "@/assets/food/food-veg-fried-rice.webp";
-import imgVegPulao       from "@/assets/food/food-veg-pulao.webp";
-import imgGreenPeasPulao from "@/assets/food/food-green-peas-pulao.webp";
-
-// Per-item images — Dal
-import imgPlainDal     from "@/assets/food/food-plain-dal.webp";
-import imgChanaDal     from "@/assets/food/food-chana-dal.webp";
-import imgDalMakhani   from "@/assets/food/food-dal-makhani.webp";
-import imgDalTadka     from "@/assets/food/food-dal-tadka.webp";
-import imgRajmaMasala  from "@/assets/food/food-rajma-masala.webp";
-import imgDalButterFry from "@/assets/food/food-dal-butter-fry.webp";
-import imgMoongDal     from "@/assets/food/food-moong-dal.webp";
-import imgMatiMaharDal from "@/assets/food/food-mati-mahar-dal.webp";
-
-// Per-item images — Vegetarian Main Course
-import imgMixVeg        from "@/assets/food/food-mix-veg.webp";
-import imgTawaVeg       from "@/assets/food/food-tawa-veg.webp";
-import imgBabyPotatoFry from "@/assets/food/food-baby-potato-fry.webp";
-import imgAluJhuri      from "@/assets/food/food-alu-jhuri.webp";
-import imgAlooDam       from "@/assets/food/food-aloo-dam.webp";
-import imgMasalaAlooDam from "@/assets/food/food-masala-aloo-dam.webp";
-import imgVegMalaiKofta from "@/assets/food/food-veg-malai-kofta.webp";
-import imgBrinjalFry    from "@/assets/food/food-brinjal-fry.webp";
-import imgPumpkinFry    from "@/assets/food/food-pumpkin-fry.webp";
-import imgAlooPatol     from "@/assets/food/food-aloo-patol-posto.webp";
-import imgAlooGobi      from "@/assets/food/food-aloo-gobi-posto.webp";
-
-// Per-item images — Paneer & Mushroom
-import imgPaneerLababdar     from "@/assets/food/food-paneer-lababdar.webp";
-import imgShahiPaneer        from "@/assets/food/food-shahi-paneer.webp";
-import imgPaneerButterMasala from "@/assets/food/food-paneer-butter-masala.webp";
-import imgKadhaiPaneer       from "@/assets/food/food-kadhai-paneer.webp";
-import imgPaneerKorma        from "@/assets/food/food-paneer-korma.webp";
-import imgPaneerKofta        from "@/assets/food/food-paneer-kofta.webp";
-import imgMatarPaneer        from "@/assets/food/food-matar-paneer.webp";
-import imgPalakPaneer        from "@/assets/food/food-palak-paneer.webp";
-import imgChilliPaneer       from "@/assets/food/food-chilli-paneer.webp";
-import imgMatarMushroom      from "@/assets/food/food-matar-mushroom.webp";
-import imgMasalaMushroom     from "@/assets/food/food-masala-mushroom.webp";
-import imgChilliMushroom     from "@/assets/food/food-chilli-mushroom.webp";
-import imgMushroomTikka      from "@/assets/food/food-mushroom-tikka.webp";
-import imgMushroomDoPyaza    from "@/assets/food/food-mushroom-do-pyaza.webp";
-
-// Per-item images — Fish Main Course
-import imgFishKalia              from "@/assets/food/food-fish-kalia.webp";
-import imgFishTenga              from "@/assets/food/food-fish-tenga.webp";
-import imgMustardFish            from "@/assets/food/food-mustard-fish.webp";
-import imgSteamFishMustard       from "@/assets/food/food-steam-fish-with-mustard.webp";
-import imgFishCurry              from "@/assets/food/food-fish-curry.webp";
-import imgFishDoPyaza            from "@/assets/food/food-fish-do-pyaza.webp";
-import imgChilliGarlicFish       from "@/assets/food/food-chilli-garlic-fish.webp";
-import imgBakedFish              from "@/assets/food/food-baked-fish.webp";
-import imgFishButterGarlicSauce  from "@/assets/food/food-fish-in-butter-garlic-sauce.webp";
-import imgFishFry                from "@/assets/food/food-fish-fry.webp";
-
-// Per-item images — Chicken Main Course
-import imgChickenAssamese      from "@/assets/food/food-chicken-assamese-style.webp";
-import imgChickenCurry         from "@/assets/food/food-chicken-curry.webp";
-import imgKadaiChicken         from "@/assets/food/food-kadai-chicken.webp";
-import imgButterChickenMasala  from "@/assets/food/food-butter-chicken-masala.webp";
-import imgAfghaniChicken       from "@/assets/food/food-afghani-chicken.webp";
-import imgChickenKosha         from "@/assets/food/food-chicken-kosha.webp";
-import imgChilliChickenGravy   from "@/assets/food/food-chilli-chicken-gravy.webp";
-import imgGarlicChicken        from "@/assets/food/food-garlic-chicken.webp";
-import imgChickenFry           from "@/assets/food/food-chicken-fry.webp";
-import imgBoiledChickenNaga    from "@/assets/food/food-boiled-chicken-naga-style.webp";
-
-// Per-item images — Mutton Main Course
-import imgMuttonAssamese  from "@/assets/food/food-mutton-assamese-style.webp";
-import imgMuttonRogan     from "@/assets/food/food-mutton-rogan.webp";
-import imgMuttonMasala    from "@/assets/food/food-mutton-masala.webp";
-import imgMuttonKosha     from "@/assets/food/food-mutton-kosha.webp";
-import imgMuttonAlooCurry from "@/assets/food/food-mutton-aloo-curry.webp";
-
-// Per-item images — Duck
-import imgDuck from "@/assets/food/food-duck-on-request.webp";
-
-// Per-item images — Desserts
-import imgMoongDalHalwa   from "@/assets/food/food-moong-dal-halwa.webp";
-import imgGajarKaHalwa    from "@/assets/food/food-gajar-ka-halwa.webp";
-import imgHotGulabJamun   from "@/assets/food/food-hot-gulab-jamun.webp";
-import imgRabriJalebi     from "@/assets/food/food-rabri-jalebi.webp";
-import imgRiceKheer       from "@/assets/food/food-rice-kheer.webp";
-import imgGurRiceKheer    from "@/assets/food/food-gur-rice-kheer.webp";
-import imgShahiTukda      from "@/assets/food/food-shahi-tukda.webp";
-import imgDahiRasgulla    from "@/assets/food/food-dahi-rasgulla.webp";
-import imgIceCream        from "@/assets/food/food-ice-cream-flavour-of-your-choice.webp";
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Type definitions
-// ─────────────────────────────────────────────────────────────────────────────
 export interface FoodItem {
   name: string;
   image: string;
@@ -219,9 +27,6 @@ export interface FoodCategory {
   subSections?: FoodSubSection[];
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Data
-// ─────────────────────────────────────────────────────────────────────────────
 export const foodCategories: FoodCategory[] = [
   {
     slug: "live-counters",
@@ -234,34 +39,34 @@ export const foodCategories: FoodCategory[] = [
         title: "Chaat Live Counter",
         selectionRule: "Any one",
         items: [
-          { name: "Pani Puri",   image: imgPaniPuri  },
-          { name: "Aloo Tikki",  image: imgAlooTikki },
-          { name: "Jhalmuri",    image: imgJhalmuri  },
+          { name: "Pani Puri", image: foodPaniPuri },
+          { name: "Aloo Tikki", image: foodAlooTikki },
+          { name: "Jhalmuri", image: foodJhalmuri },
         ],
       },
       {
         title: "South Indian Live Counter",
         selectionRule: "Any one item",
         items: [
-          { name: "Dosa (Masala, Plain)", image: imgDosaMasalaPlain },
-          { name: "Mini Dosa",            image: imgMiniDosa        },
-          { name: "Idli Sambar",          image: imgIdliSambar      },
+          { name: "Dosa (Masala, Plain)", image: menuChinese },
+          { name: "Mini Dosa", image: menuChinese },
+          { name: "Idli Sambar", image: menuChinese },
         ],
       },
       {
         title: "Continental Live Counter",
         selectionRule: "Any one",
         items: [
-          { name: "Pasta (White or Red Sauce)",              image: imgPastaWhiteOrRedSauce },
-          { name: "Grilled Vegetables with Herb in Butter",  image: imgGrilledVegetables    },
+          { name: "Pasta (White or Red Sauce)", image: menuChinese },
+          { name: "Grilled Vegetables with Herb in Butter", image: menuChinese },
         ],
       },
       {
         title: "Chinese Live Counter",
         selectionRule: "Any one item",
         items: [
-          { name: "Stir Fry Veg Noodles",    image: imgStirFryVegNoodles },
-          { name: "Momo (Veg or Chicken)",   image: imgMomoVegOrChicken  },
+          { name: "Stir Fry Veg Noodles", image: menuChinese },
+          { name: "Momo (Veg or Chicken)", image: menuChinese },
         ],
       },
     ],
@@ -277,42 +82,42 @@ export const foodCategories: FoodCategory[] = [
         title: "Veg Starter",
         selectionRule: "Any one item",
         items: [
-          { name: "Hara Bhara Kabab",    image: imgHaraBharaKabab    },
-          { name: "Paneer Tikka",        image: imgPaneerTikka       },
-          { name: "Corn & Kaju Kabab",   image: imgCornKajuKabab     },
-          { name: "Palak Pakora",        image: imgPalakPakora       },
-          { name: "Paneer Pakora",       image: imgPaneerPakora      },
-          { name: "Veg Pakora",          image: imgVegPakora         },
-          { name: "Onion Pakora",        image: imgOnionPakora       },
-          { name: "French Fries",        image: imgFrenchFries       },
-          { name: "Crispy Baby Corn",    image: imgCrispyBabyCorn    },
-          { name: "Cheese Ball",         image: imgCheeseBall        },
-          { name: "Chilli Paneer Dry",   image: imgChilliPaneerDry   },
-          { name: "Honey Chilli Potato", image: imgHoneyChilliPotato },
-          { name: "Veg Manchurian Dry",  image: imgVegManchurianDry  },
-          { name: "Cheese Nuggets",      image: imgCheeseNuggets     },
+          { name: "Hara Bhara Kabab", image: menuVeg },
+          { name: "Paneer Tikka", image: menuVeg },
+          { name: "Corn & Kaju Kabab", image: menuVeg },
+          { name: "Palak Pakora", image: menuVeg },
+          { name: "Paneer Pakora", image: menuVeg },
+          { name: "Veg Pakora", image: menuVeg },
+          { name: "Onion Pakora", image: menuVeg },
+          { name: "French Fries", image: menuVeg },
+          { name: "Crispy Baby Corn", image: menuVeg },
+          { name: "Cheese Ball", image: menuVeg },
+          { name: "Chilli Paneer Dry", image: menuVeg },
+          { name: "Honey Chilli Potato", image: menuVeg },
+          { name: "Veg Manchurian Dry", image: menuVeg },
+          { name: "Cheese Nuggets", image: menuVeg },
         ],
       },
       {
         title: "Non-Veg Starter",
         selectionRule: "Any one item",
         items: [
-          { name: "Chicken Tikka",          image: imgChickenTikka         },
-          { name: "Chicken 65",             image: imgChicken65            },
-          { name: "Chicken Majestic",       image: imgChickenMajestic      },
-          { name: "Chicken Satay",          image: imgChickenSatay         },
-          { name: "Chicken Malai Tikka",    image: imgChickenMalaiTikka    },
-          { name: "Chicken Hariyali Tikka", image: imgChickenHariyaliTikka },
-          { name: "Chicken Malai Kabab",    image: imgChickenMalaiKabab    },
-          { name: "Chicken Pakora",         image: imgChickenPakora        },
-          { name: "Chicken Crisper",        image: imgChickenCrisper       },
-          { name: "Chilli Chicken Dry",     image: imgChilliChickenDry     },
-          { name: "Chicken Dry Fry",        image: imgChickenDryFry        },
-          { name: "Chicken Cutlet",         image: imgChickenCutlet        },
-          { name: "Fish Finger",            image: imgFishFinger           },
-          { name: "Fish Ball",              image: imgFishBall             },
-          { name: "Fish Cutlet",            image: imgFishCutlet           },
-          { name: "Crispy Fish Cigar",      image: imgCrispyFishCigar      },
+          { name: "Chicken Tikka", image: menuNonveg },
+          { name: "Chicken 65", image: menuNonveg },
+          { name: "Chicken Majestic", image: menuNonveg },
+          { name: "Chicken Satay", image: menuNonveg },
+          { name: "Chicken Malai Tikka", image: menuNonveg },
+          { name: "Chicken Hariyali Tikka", image: menuNonveg },
+          { name: "Chicken Malai Kabab", image: menuNonveg },
+          { name: "Chicken Pakora", image: menuNonveg },
+          { name: "Chicken Crisper", image: menuNonveg },
+          { name: "Chilli Chicken Dry", image: menuNonveg },
+          { name: "Chicken Dry Fry", image: menuNonveg },
+          { name: "Chicken Cutlet", image: menuNonveg },
+          { name: "Fish Finger", image: menuNonveg },
+          { name: "Fish Ball", image: menuNonveg },
+          { name: "Fish Cutlet", image: menuNonveg },
+          { name: "Crispy Fish Cigar", image: menuNonveg },
         ],
       },
     ],
@@ -328,35 +133,35 @@ export const foodCategories: FoodCategory[] = [
         title: "Mocktail Bar",
         selectionRule: "Any one item",
         items: [
-          { name: "Virgin Mojito",     image: imgVirginMojito     },
-          { name: "Masala Soda",       image: imgMasalaSoda       },
-          { name: "Blue Lagoon",       image: imgBlueLagoon       },
-          { name: "Watermelon Cooler", image: imgWatermelonCooler },
-          { name: "Aam Panna",         image: imgAamPanna         },
-          { name: "Peach Mojito",      image: imgPeachMojito      },
+          { name: "Virgin Mojito", image: menuDrinks },
+          { name: "Masala Soda", image: menuDrinks },
+          { name: "Blue Lagoon", image: menuDrinks },
+          { name: "Watermelon Cooler", image: menuDrinks },
+          { name: "Aam Panna", image: menuDrinks },
+          { name: "Peach Mojito", image: menuDrinks },
         ],
       },
       {
         title: "Tea & Coffee Bar",
         selectionRule: "Any two items",
         items: [
-          { name: "Milk Coffee",  image: imgMilkCoffee  },
-          { name: "Black Coffee", image: imgBlackCoffee },
-          { name: "Milk Tea",     image: imgMilkTea     },
-          { name: "Black Tea",    image: imgBlackTea    },
-          { name: "Green Tea",    image: imgGreenTea    },
-          { name: "Masala Tea",   image: imgMasalaTea   },
-          { name: "Lemon Tea",    image: imgLemonTea    },
+          { name: "Milk Coffee", image: menuDrinks },
+          { name: "Black Coffee", image: menuDrinks },
+          { name: "Milk Tea", image: menuDrinks },
+          { name: "Black Tea", image: menuDrinks },
+          { name: "Green Tea", image: menuDrinks },
+          { name: "Masala Tea", image: menuDrinks },
+          { name: "Lemon Tea", image: menuDrinks },
         ],
       },
       {
         title: "Soups",
         selectionRule: "Any one Veg / Non-Veg",
         items: [
-          { name: "Sweet Corn Soup",  image: imgSweetCornSoup },
-          { name: "Clear Soup",       image: imgClearSoup     },
-          { name: "Hot & Sour Soup",  image: imgHotSourSoup   },
-          { name: "Manchow Soup",     image: imgManchowSoup   },
+          { name: "Sweet Corn Soup", image: menuDrinks },
+          { name: "Clear Soup", image: menuDrinks },
+          { name: "Hot & Sour Soup", image: menuDrinks },
+          { name: "Manchow Soup", image: menuDrinks },
         ],
       },
     ],
@@ -372,158 +177,158 @@ export const foodCategories: FoodCategory[] = [
         title: "Indian Salads",
         selectionRule: "Any two",
         items: [
-          { name: "Green Salad",  image: imgGreenSalad  },
-          { name: "Sprout Salad", image: imgSproutSalad },
-          { name: "Onion Salad",  image: imgOnionSalad  },
-          { name: "Corn Salad",   image: imgCornSalad   },
-          { name: "Peanut Salad", image: imgPeanutSalad },
+          { name: "Green Salad", image: menuVeg },
+          { name: "Sprout Salad", image: menuVeg },
+          { name: "Onion Salad", image: menuVeg },
+          { name: "Corn Salad", image: menuVeg },
+          { name: "Peanut Salad", image: menuVeg },
         ],
       },
       {
         title: "Chutney",
         selectionRule: "Any two items",
         items: [
-          { name: "Mint-Coriander Chutney", image: imgMintCorianderChutney },
-          { name: "Chilli Mustard Chutney", image: imgChilliMustardChutney },
-          { name: "Garlic Chutney",         image: imgGarlicChutney        },
-          { name: "Mint Chutney",           image: imgMintChutney          },
-          { name: "Masoor Dal Chutney",     image: imgMasoorDalChutney     },
-          { name: "Sesame Chutney",         image: imgSesameChutney        },
+          { name: "Mint-Coriander Chutney", image: menuVeg },
+          { name: "Chilli Mustard Chutney", image: menuVeg },
+          { name: "Garlic Chutney", image: menuVeg },
+          { name: "Mint Chutney", image: menuVeg },
+          { name: "Masoor Dal Chutney", image: menuVeg },
+          { name: "Sesame Chutney", image: menuVeg },
         ],
       },
       {
         title: "Complementary Add-ons",
         selectionRule: "Included",
         items: [
-          { name: "Pickle",       image: imgPickle      },
-          { name: "Sliced Lemon", image: imgSlicedLemon },
-          { name: "Sliced Onion", image: imgSlicedOnion },
-          { name: "Green Chilli", image: imgGreenChilli },
+          { name: "Pickle", image: menuVeg },
+          { name: "Sliced Lemon", image: menuVeg },
+          { name: "Sliced Onion", image: menuVeg },
+          { name: "Green Chilli", image: menuVeg },
         ],
       },
       {
         title: "Breads",
         selectionRule: "Any one item",
         items: [
-          { name: "Rumali Roti",    image: imgRumaliRoti    },
-          { name: "Tandoori Roti",  image: imgTandooriRoti  },
-          { name: "Plain Naan",     image: imgPlainNaan     },
-          { name: "Butter Naan",    image: imgButterNaan    },
-          { name: "Plain Puri",     image: imgPlainPuri     },
-          { name: "Lachha Paratha", image: imgLachhaParatha },
+          { name: "Rumali Roti", image: menuVeg },
+          { name: "Tandoori Roti", image: menuVeg },
+          { name: "Plain Naan", image: menuVeg },
+          { name: "Butter Naan", image: menuVeg },
+          { name: "Plain Puri", image: menuVeg },
+          { name: "Lachha Paratha", image: menuVeg },
         ],
       },
       {
         title: "Rice",
         selectionRule: "Any two items",
         items: [
-          { name: "Steam Rice",       image: imgSteamRice      },
-          { name: "Jeera Rice",       image: imgJeeraRice      },
-          { name: "Veg Biryani",      image: imgVegBiryani     },
-          { name: "Veg Fried Rice",   image: imgVegFriedRice   },
-          { name: "Veg Pulao",        image: imgVegPulao       },
-          { name: "Green Peas Pulao", image: imgGreenPeasPulao },
+          { name: "Steam Rice", image: menuVeg },
+          { name: "Jeera Rice", image: menuVeg },
+          { name: "Veg Biryani", image: menuVeg },
+          { name: "Veg Fried Rice", image: menuVeg },
+          { name: "Veg Pulao", image: menuVeg },
+          { name: "Green Peas Pulao", image: menuVeg },
         ],
       },
       {
         title: "Dal",
         selectionRule: "Any two items",
         items: [
-          { name: "Plain Dal",      image: imgPlainDal     },
-          { name: "Chana Dal",      image: imgChanaDal     },
-          { name: "Dal Makhani",    image: imgDalMakhani   },
-          { name: "Dal Tadka",      image: imgDalTadka     },
-          { name: "Rajma Masala",   image: imgRajmaMasala  },
-          { name: "Dal Butter Fry", image: imgDalButterFry },
-          { name: "Moong Dal",      image: imgMoongDal     },
-          { name: "Mati Mahar Dal", image: imgMatiMaharDal },
+          { name: "Plain Dal", image: menuVeg },
+          { name: "Chana Dal", image: menuVeg },
+          { name: "Dal Makhani", image: menuVeg },
+          { name: "Dal Tadka", image: menuVeg },
+          { name: "Rajma Masala", image: menuVeg },
+          { name: "Dal Butter Fry", image: menuVeg },
+          { name: "Moong Dal", image: menuVeg },
+          { name: "Mati Mahar Dal", image: menuVeg },
         ],
       },
       {
         title: "Vegetarian Main Course",
         selectionRule: "Any two items",
         items: [
-          { name: "Mix Veg",          image: imgMixVeg        },
-          { name: "Tawa Veg",         image: imgTawaVeg       },
-          { name: "Baby Potato Fry",  image: imgBabyPotatoFry },
-          { name: "Alu Jhuri",        image: imgAluJhuri      },
-          { name: "Aloo Dam",         image: imgAlooDam       },
-          { name: "Masala Aloo Dam",  image: imgMasalaAlooDam },
-          { name: "Veg Malai Kofta",  image: imgVegMalaiKofta },
-          { name: "Brinjal Fry",      image: imgBrinjalFry    },
-          { name: "Pumpkin Fry",      image: imgPumpkinFry    },
-          { name: "Aloo Patol Posto", image: imgAlooPatol     },
-          { name: "Aloo Gobi Posto",  image: imgAlooGobi      },
+          { name: "Mix Veg", image: menuVeg },
+          { name: "Tawa Veg", image: menuVeg },
+          { name: "Baby Potato Fry", image: menuVeg },
+          { name: "Alu Jhuri", image: menuVeg },
+          { name: "Aloo Dam", image: menuVeg },
+          { name: "Masala Aloo Dam", image: menuVeg },
+          { name: "Veg Malai Kofta", image: menuVeg },
+          { name: "Brinjal Fry", image: menuVeg },
+          { name: "Pumpkin Fry", image: menuVeg },
+          { name: "Aloo Patol Posto", image: menuVeg },
+          { name: "Aloo Gobi Posto", image: menuVeg },
         ],
       },
       {
         title: "Paneer & Mushroom",
         selectionRule: "Any one item",
         items: [
-          { name: "Paneer Lababdar",     image: imgPaneerLababdar     },
-          { name: "Shahi Paneer",        image: imgShahiPaneer        },
-          { name: "Paneer Butter Masala",image: imgPaneerButterMasala },
-          { name: "Kadhai Paneer",       image: imgKadhaiPaneer       },
-          { name: "Paneer Korma",        image: imgPaneerKorma        },
-          { name: "Paneer Kofta",        image: imgPaneerKofta        },
-          { name: "Matar Paneer",        image: imgMatarPaneer        },
-          { name: "Palak Paneer",        image: imgPalakPaneer        },
-          { name: "Chilli Paneer",       image: imgChilliPaneer       },
-          { name: "Matar Mushroom",      image: imgMatarMushroom      },
-          { name: "Masala Mushroom",     image: imgMasalaMushroom     },
-          { name: "Chilli Mushroom",     image: imgChilliMushroom     },
-          { name: "Mushroom Tikka",      image: imgMushroomTikka      },
-          { name: "Mushroom Do Pyaza",   image: imgMushroomDoPyaza    },
+          { name: "Paneer Lababdar", image: menuVeg },
+          { name: "Shahi Paneer", image: menuVeg },
+          { name: "Paneer Butter Masala", image: menuVeg },
+          { name: "Kadhai Paneer", image: menuVeg },
+          { name: "Paneer Korma", image: menuVeg },
+          { name: "Paneer Kofta", image: menuVeg },
+          { name: "Matar Paneer", image: menuVeg },
+          { name: "Palak Paneer", image: menuVeg },
+          { name: "Chilli Paneer", image: menuVeg },
+          { name: "Matar Mushroom", image: menuVeg },
+          { name: "Masala Mushroom", image: menuVeg },
+          { name: "Chilli Mushroom", image: menuVeg },
+          { name: "Mushroom Tikka", image: menuVeg },
+          { name: "Mushroom Do Pyaza", image: menuVeg },
         ],
       },
       {
         title: "Fish Main Course",
         selectionRule: "Any one item",
         items: [
-          { name: "Fish Kalia",                   image: imgFishKalia             },
-          { name: "Fish Tenga",                   image: imgFishTenga             },
-          { name: "Mustard Fish",                 image: imgMustardFish           },
-          { name: "Steam Fish with Mustard",      image: imgSteamFishMustard      },
-          { name: "Fish Curry",                   image: imgFishCurry             },
-          { name: "Fish Do Pyaza",                image: imgFishDoPyaza           },
-          { name: "Chilli Garlic Fish",           image: imgChilliGarlicFish      },
-          { name: "Baked Fish",                   image: imgBakedFish             },
-          { name: "Fish in Butter Garlic Sauce",  image: imgFishButterGarlicSauce },
-          { name: "Fish Fry",                     image: imgFishFry               },
+          { name: "Fish Kalia", image: menuNonveg },
+          { name: "Fish Tenga", image: menuNonveg },
+          { name: "Mustard Fish", image: menuNonveg },
+          { name: "Steam Fish with Mustard", image: menuNonveg },
+          { name: "Fish Curry", image: menuNonveg },
+          { name: "Fish Do Pyaza", image: menuNonveg },
+          { name: "Chilli Garlic Fish", image: menuNonveg },
+          { name: "Baked Fish", image: menuNonveg },
+          { name: "Fish in Butter Garlic Sauce", image: menuNonveg },
+          { name: "Fish Fry", image: menuNonveg },
         ],
       },
       {
         title: "Chicken Main Course",
         selectionRule: "Any two items",
         items: [
-          { name: "Chicken Assamese Style",   image: imgChickenAssamese     },
-          { name: "Chicken Curry",            image: imgChickenCurry        },
-          { name: "Kadai Chicken",            image: imgKadaiChicken        },
-          { name: "Butter Chicken Masala",    image: imgButterChickenMasala },
-          { name: "Afghani Chicken",          image: imgAfghaniChicken      },
-          { name: "Chicken Kosha",            image: imgChickenKosha        },
-          { name: "Chilli Chicken Gravy",     image: imgChilliChickenGravy  },
-          { name: "Garlic Chicken",           image: imgGarlicChicken       },
-          { name: "Chicken Fry",              image: imgChickenFry          },
-          { name: "Boiled Chicken Naga Style",image: imgBoiledChickenNaga   },
+          { name: "Chicken Assamese Style", image: menuNonveg },
+          { name: "Chicken Curry", image: menuNonveg },
+          { name: "Kadai Chicken", image: menuNonveg },
+          { name: "Butter Chicken Masala", image: menuNonveg },
+          { name: "Afghani Chicken", image: menuNonveg },
+          { name: "Chicken Kosha", image: menuNonveg },
+          { name: "Chilli Chicken Gravy", image: menuNonveg },
+          { name: "Garlic Chicken", image: menuNonveg },
+          { name: "Chicken Fry", image: menuNonveg },
+          { name: "Boiled Chicken Naga Style", image: menuNonveg },
         ],
       },
       {
         title: "Mutton Main Course",
         selectionRule: "Any one item",
         items: [
-          { name: "Mutton Assamese Style", image: imgMuttonAssamese  },
-          { name: "Mutton Rogan",          image: imgMuttonRogan     },
-          { name: "Mutton Masala",         image: imgMuttonMasala    },
-          { name: "Mutton Kosha",          image: imgMuttonKosha     },
-          { name: "Mutton Aloo Curry",     image: imgMuttonAlooCurry },
+          { name: "Mutton Assamese Style", image: menuNonveg },
+          { name: "Mutton Rogan", image: menuNonveg },
+          { name: "Mutton Masala", image: menuNonveg },
+          { name: "Mutton Kosha", image: menuNonveg },
+          { name: "Mutton Aloo Curry", image: menuNonveg },
         ],
       },
       {
         title: "Duck",
         selectionRule: "On request · Extra ₹75/pax",
         items: [
-          { name: "Duck (on request)", image: imgDuck },
+          { name: "Duck (on request)", image: menuNonveg },
         ],
       },
     ],
@@ -539,15 +344,15 @@ export const foodCategories: FoodCategory[] = [
         title: "Desserts",
         selectionRule: "Any two items",
         items: [
-          { name: "Moong Dal Halwa",                    image: imgMoongDalHalwa },
-          { name: "Gajar ka Halwa",                     image: imgGajarKaHalwa  },
-          { name: "Hot Gulab Jamun",                    image: imgHotGulabJamun },
-          { name: "Rabri Jalebi",                       image: imgRabriJalebi   },
-          { name: "Rice Kheer",                         image: imgRiceKheer     },
-          { name: "Gur Rice Kheer",                     image: imgGurRiceKheer  },
-          { name: "Shahi Tukda",                        image: imgShahiTukda    },
-          { name: "Dahi Rasgulla",                      image: imgDahiRasgulla  },
-          { name: "Ice Cream (Flavour of Your Choice)", image: imgIceCream      },
+          { name: "Moong Dal Halwa", image: menuBirthday },
+          { name: "Gajar ka Halwa", image: menuBirthday },
+          { name: "Hot Gulab Jamun", image: menuBirthday },
+          { name: "Rabri Jalebi", image: menuBirthday },
+          { name: "Rice Kheer", image: menuBirthday },
+          { name: "Gur Rice Kheer", image: menuBirthday },
+          { name: "Shahi Tukda", image: menuBirthday },
+          { name: "Dahi Rasgulla", image: menuBirthday },
+          { name: "Ice Cream (Flavour of Your Choice)", image: menuBirthday },
         ],
       },
     ],
