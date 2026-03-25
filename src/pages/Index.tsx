@@ -36,8 +36,8 @@ const Index = () => {
       <div className="fade-up"><About /></div>
       <div className="fade-up"><Services /></div>
       <div className="fade-up"><WhyChooseUs /></div>
-      <div className="fade-up"><FoodMenu /></div>
       <div className="fade-up"><Gallery /></div>
+      <div className="fade-up"><FoodMenu /></div>
       <div className="fade-up"><Testimonials /></div>
       <div className="fade-up"><Contact /></div>
       <Footer />
