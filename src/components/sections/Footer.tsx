@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.webp";
 
@@ -15,15 +15,24 @@ const Footer = () => {
             Guwahati's premier banquet hall for weddings, corporate events, and celebrations.
           </p>
           <div className="flex gap-4 pt-2">
-            {["facebook", "instagram", "twitter", "youtube"].map((s) => (
-              <a
-                key={s}
-                href="#"
-                className="w-9 h-9 rounded-full border border-background/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors"
-              >
-                <span className="text-xs font-body uppercase">{s[0]}</span>
-              </a>
-            ))}
+            <a
+              href="https://www.facebook.com/share/1BzyaD3ioV/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full border border-background/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.instagram.com/rajnandini_banquethall"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full border border-background/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-4 h-4" />
+            </a>
           </div>
         </div>
 
