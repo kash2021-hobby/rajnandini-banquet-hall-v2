@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Users, CalendarCheck, Sparkles, IndianRupee } from "lucide-react";
-import serviceGatherings from "@/assets/service-gatherings.webp";
+import serviceGatherings from "@/assets/gallery-27.webp";
 import serviceEvents from "@/assets/service-events.webp";
 import serviceBirthday from "@/assets/birthday-Dr7tw8CZ.webp";
 import servicePackages from "@/assets/service-packages.webp";
