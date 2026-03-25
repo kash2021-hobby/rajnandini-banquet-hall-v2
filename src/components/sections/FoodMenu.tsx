@@ -1,17 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
-import menuChinese from "@/assets/menu-chinese.webp";
-import menuVeg from "@/assets/menu-veg-new.webp";
-import menuNonveg from "@/assets/menu-nonveg-new.webp";
-import menuBirthday from "@/assets/menu-birthday.webp";
-import menuDrinks from "@/assets/menu-drinks.webp";
+import liveCounters from "@/assets/food/food-pani-puri.webp";
+import mainCourse from "@/assets/food/food-paneer-kofta.webp";
+import Starters from "@/assets/food/food-chicken-tikka.webp";
+import Desserts from "@/assets/food/food-rabri-jalebi.webp";
+import bevaragesSoup from "@/assets/food/food-watermelon-cooler.webp";
 
 const menus = [
-  { title: "Live Counters", image: menuChinese, slug: "live-counters" },
-  { title: "Starters", image: menuNonveg, slug: "starters" },
-  { title: "Beverages & Soups", image: menuDrinks, slug: "beverages-soups" },
-  { title: "Main Course", image: menuVeg, slug: "main-course" },
-  { title: "Desserts", image: menuBirthday, slug: "desserts" },
+  { title: "Live Counters", image: liveCounters, slug: "live-counters" },
+  { title: "Starters", image: Starters , slug: "starters" },
+  { title: "Beverages & Soups", image: bevaragesSoup, slug: "beverages-soups" },
+  { title: "Main Course", image: mainCourse, slug: "main-course" },
+  { title: "Desserts", image: Desserts, slug: "desserts" },
 ];
 
 const MenuCard = ({ menu }: { menu: (typeof menus)[0] }) => {
